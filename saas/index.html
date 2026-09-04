@@ -6,7 +6,7 @@
   <meta name="description" content="株式会社ライトアップ AIコンサル局のSaaSチームが企画・検討している、新しいAIサービスのLP一覧です。">
   <meta name="theme-color" content="#f4f2ec">
   <link rel="canonical" href="https://writeup-inc.github.io/saas/">
-  <title>SaaS TEAM / PROJECT INDEX | AIコンサル局</title>
+  <title>See, Think, Learn &amp; Challenge. | AIコンサル局 SaaSチーム</title>
   <style>
     :root {
       --ink: #14251f;
@@ -133,11 +133,50 @@
 
     h1 span { color: var(--orange); }
 
+    .concept-heading {
+      font-size: clamp(38px, 6.1vw, 76px);
+    }
+
+    .mobile-break { display: none; }
+
     .lead {
       max-width: 580px;
       margin: 28px 0 0;
       color: var(--ink-soft);
       font-size: clamp(15px, 1.5vw, 18px);
+    }
+
+    .concept-steps {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      width: max-content;
+      max-width: 100%;
+      margin-top: 26px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .concept-step {
+      display: flex;
+      min-width: 112px;
+      padding: 10px 15px 10px 0;
+      flex-direction: column;
+    }
+
+    .concept-step + .concept-step {
+      padding-left: 15px;
+      border-left: 1px solid var(--line);
+    }
+
+    .concept-step b {
+      color: var(--green);
+      font-size: 10px;
+      letter-spacing: .13em;
+    }
+
+    .concept-step span {
+      color: var(--muted);
+      font-size: 10px;
     }
 
     .count {
@@ -465,7 +504,14 @@
       .status { font-size: 10px; }
       main { padding-top: 62px; padding-bottom: 76px; }
       h1 { font-size: clamp(40px, 14vw, 60px); }
+      .concept-heading { font-size: clamp(37px, 11vw, 46px); }
+      .mobile-break { display: block; }
       .lead { margin-top: 22px; font-size: 14px; }
+      .concept-steps { grid-template-columns: repeat(2, 1fr); width: 100%; }
+      .concept-step { min-width: 0; padding-left: 0; }
+      .concept-step + .concept-step { padding-left: 12px; }
+      .concept-step:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+      .concept-step:nth-child(4) { border-top: 1px solid var(--line); }
       .context { padding: 25px 20px; }
       .context-copy { font-size: 13px; }
       .notice { grid-template-columns: 1fr; gap: 12px; }
@@ -501,8 +547,14 @@
       <section class="hero" aria-labelledby="page-title">
         <div>
           <p class="eyebrow">AI Consulting Bureau / SaaS Team</p>
-          <h1 id="page-title">Ideas,<br><span>in progress.</span></h1>
-          <p class="lead">AIコンサル局のSaaSチームから生まれる、新しいサービス企画。その検討段階のLPを公開しています。</p>
+          <h1 class="concept-heading" id="page-title">See, Think,<br><span>Learn &amp;<br class="mobile-break"> Challenge.</span></h1>
+          <p class="lead">見る。考える。学ぶ。そして、挑戦する。AIコンサル局のSaaSチームから生まれる、新しいAIサービス企画と検討中のLPを公開しています。</p>
+          <div class="concept-steps" aria-label="See, Think, Learn and Challenge の意味">
+            <span class="concept-step"><b>SEE</b><span>顧客を見る</span></span>
+            <span class="concept-step"><b>THINK</b><span>仕組みを考える</span></span>
+            <span class="concept-step"><b>LEARN</b><span>反応から学ぶ</span></span>
+            <span class="concept-step"><b>CHALLENGE</b><span>形にして挑む</span></span>
+          </div>
         </div>
         <div class="count" aria-label="公開中のページ数 4件">
           <strong>04</strong>
