@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="株式会社ライトアップが公開しているSaaS・AIサービスページの一覧です。">
+  <meta name="description" content="株式会社ライトアップ AIコンサル局のSaaSチームが企画・検討している、新しいAIサービスのLP一覧です。">
   <meta name="theme-color" content="#f4f2ec">
   <link rel="canonical" href="https://writeup-inc.github.io/saas/">
-  <title>SaaS / Service Index | WRITEUP</title>
+  <title>SaaS TEAM / PROJECT INDEX | AIコンサル局</title>
   <style>
     :root {
       --ink: #14251f;
@@ -163,6 +163,139 @@
       letter-spacing: .14em;
     }
 
+    .context {
+      margin-bottom: clamp(38px, 5vw, 58px);
+      padding: clamp(28px, 4vw, 46px);
+      color: #fff;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(232,111,54,.26), transparent 18rem),
+        var(--green);
+      box-shadow: 0 22px 60px rgba(20,37,31,.13);
+    }
+
+    .context-head {
+      display: grid;
+      grid-template-columns: minmax(280px, .82fr) minmax(320px, 1.18fr);
+      gap: clamp(30px, 5vw, 70px);
+      align-items: end;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255,255,255,.18);
+    }
+
+    .context-label {
+      display: block;
+      margin-bottom: 10px;
+      color: #f2a47e;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .18em;
+    }
+
+    .context-title {
+      margin: 0;
+      font-size: clamp(25px, 3.3vw, 42px);
+      letter-spacing: -.04em;
+      line-height: 1.25;
+    }
+
+    .context-copy {
+      margin: 0;
+      color: rgba(255,255,255,.74);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .org-flow {
+      display: grid;
+      grid-template-columns: 1fr 34px 1.3fr 34px 1fr;
+      gap: 10px;
+      align-items: stretch;
+      margin-top: 30px;
+    }
+
+    .org-node {
+      display: flex;
+      min-height: 122px;
+      padding: 20px;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.06);
+    }
+
+    .org-node.team {
+      border-color: rgba(242,164,126,.62);
+      background: rgba(232,111,54,.13);
+    }
+
+    .org-node span {
+      margin-bottom: 7px;
+      color: #f2a47e;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .15em;
+    }
+
+    .org-node strong {
+      font-size: 19px;
+      letter-spacing: -.02em;
+    }
+
+    .org-node small {
+      margin-top: 8px;
+      color: rgba(255,255,255,.66);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .org-arrow {
+      display: grid;
+      place-items: center;
+      color: #f2a47e;
+      font-size: 19px;
+    }
+
+    .notice {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 24px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.18);
+    }
+
+    .notice b {
+      color: #f2a47e;
+      font-size: 10px;
+      letter-spacing: .16em;
+    }
+
+    .notice ul {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .notice li {
+      position: relative;
+      padding-left: 16px;
+      color: rgba(255,255,255,.8);
+      font-size: 12px;
+    }
+
+    .notice li::before {
+      content: "";
+      position: absolute;
+      top: .78em;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+
     .list {
       display: grid;
       gap: 14px;
@@ -285,6 +418,10 @@
     @media (max-width: 820px) {
       .hero { grid-template-columns: 1fr; gap: 28px; }
       .count { width: max-content; padding-left: 0; padding-right: 24px; border-left: 0; border-right: 1px solid var(--line); }
+      .context-head { grid-template-columns: 1fr; gap: 18px; }
+      .org-flow { grid-template-columns: 1fr; }
+      .org-node { min-height: 0; }
+      .org-arrow { min-height: 20px; transform: rotate(90deg); }
       .service { grid-template-columns: 52px 1fr 40px; gap: 20px; }
       .description-wrap { grid-column: 2 / 4; }
     }
@@ -297,6 +434,9 @@
       main { padding-top: 62px; padding-bottom: 76px; }
       h1 { font-size: clamp(40px, 14vw, 60px); }
       .lead { margin-top: 22px; font-size: 14px; }
+      .context { padding: 25px 20px; }
+      .context-copy { font-size: 13px; }
+      .notice { grid-template-columns: 1fr; gap: 12px; }
       .service {
         grid-template-columns: 36px minmax(0, 1fr) 36px;
         gap: 14px;
@@ -322,19 +462,58 @@
   <div class="shell">
     <header>
       <a class="brand" href="./"><span class="brand-mark">W</span>WRITEUP / SaaS</a>
-      <span class="status">PUBLIC INDEX</span>
+      <span class="status">PLANNING / REVIEW</span>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="page-title">
         <div>
-          <p class="eyebrow">Service directory</p>
-          <h1 id="page-title">SaaS &amp;<br><span>AI Services.</span></h1>
-          <p class="lead">株式会社ライトアップが公開している、SaaS・AIサービスと関連コンテンツの一覧です。</p>
+          <p class="eyebrow">AI Consulting Bureau / SaaS Team</p>
+          <h1 id="page-title">Ideas,<br><span>in progress.</span></h1>
+          <p class="lead">AIコンサル局のSaaSチームから生まれる、新しいサービス企画。その検討段階のLPを公開しています。</p>
         </div>
         <div class="count" aria-label="公開中のページ数 4件">
           <strong>04</strong>
           <span>PUBLIC<br>PAGES</span>
+        </div>
+      </section>
+
+      <section class="context" aria-labelledby="context-title">
+        <div class="context-head">
+          <div>
+            <span class="context-label">ABOUT THIS INDEX</span>
+            <h2 class="context-title" id="context-title">まだないサービスを、<br>形にしている場所です。</h2>
+          </div>
+          <p class="context-copy">株式会社ライトアップの「AIコンサル局」内にあるSaaSチームが、顧客の課題から新しいサービスを企画し、LPにして検討・検証しています。白石を責任者に、西村・木場・小松の4名を中心とし、若手メンバーの中森も参加しています。</p>
+        </div>
+
+        <div class="org-flow" aria-label="AIコンサル局から企画検討中のLPが生まれる流れ">
+          <div class="org-node">
+            <span>AI CONSULTING BUREAU</span>
+            <strong>AIコンサル局</strong>
+            <small>AIサービスを企画・実装する組織</small>
+          </div>
+          <div class="org-arrow" aria-hidden="true">→</div>
+          <div class="org-node team">
+            <span>SAAS TEAM / CORE 4</span>
+            <strong>SaaSチーム</strong>
+            <small>白石（責任者）・西村・木場・小松<br>＋ 若手メンバー 中森</small>
+          </div>
+          <div class="org-arrow" aria-hidden="true">→</div>
+          <div class="org-node">
+            <span>NEW PROJECTS</span>
+            <strong>企画検討中のLP</strong>
+            <small>仮説を見える形にして検討・検証</small>
+          </div>
+        </div>
+
+        <div class="notice">
+          <b>PLEASE NOTE</b>
+          <ul>
+            <li>ここに掲載しているのは、比較的新しい企画を中心とした検討中サービスLPの一部です。</li>
+            <li>検討段階のため、サービス名・内容・提供条件は今後変更される場合があります。</li>
+            <li>開発が完了し正式提供が始まったサービスは独自ドメインへ移行し、この一覧から外れる場合があります。</li>
+          </ul>
         </div>
       </section>
 
