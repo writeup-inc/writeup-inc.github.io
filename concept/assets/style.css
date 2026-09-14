@@ -67,6 +67,7 @@ h1, h2, h3, p, figure, blockquote, ul, ol { margin: 0; }
 .article-card:first-child { grid-column: span 2; }
 .visual { position: relative; display: grid; place-items: center; overflow: hidden; aspect-ratio: 1.45; background: var(--accent-soft); }
 .article-card:first-child .visual { aspect-ratio: 1.85; }
+.visual > img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(47,108,88,.10), rgba(47,108,88,0) 58%); }
 .visual-no { color: var(--accent); font: 900 clamp(46px, 7vw, 96px)/1 var(--en); letter-spacing: -.06em; opacity: .5; }
 .article-card:hover .visual-no { opacity: .75; }
@@ -94,6 +95,9 @@ h1, h2, h3, p, figure, blockquote, ul, ol { margin: 0; }
 .hero-inner { width: min(var(--article), calc(100% - 48px)); margin-inline: auto; }
 .eyebrow { display: flex; align-items: center; gap: 12px; color: var(--accent); font: 900 11px/1.5 var(--en); letter-spacing: .16em; }
 .eyebrow::before { content: ""; width: 34px; height: 3px; background: var(--accent); }
+.hero-figure { margin: 18px 0 0; border: 1px solid var(--line); background: var(--paper-2); }
+.hero-figure img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.hero-figure figcaption { padding: 7px 10px; border-top: 1px solid var(--line); color: var(--accent); font-weight: 800; }
 .hero-title { margin-top: 20px; font-size: clamp(27px, 4.4vw, 42px); font-weight: 800; letter-spacing: -.045em; line-height: 1.38; }
 .hero-lead { margin-top: 20px; color: #4a4a4a; font-size: clamp(15px, 1.6vw, 17px); font-weight: 500; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
