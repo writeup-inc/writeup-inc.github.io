@@ -80,6 +80,15 @@ h1, h2, h3, p, figure, blockquote, ul, ol { margin: 0; }
 .updated { margin-top: 10px; color: #8a8a8a; font-size: 12px; }
 .updated b { margin-right: 5px; color: #666; font-weight: 700; }
 
+
+/* ── 書き手（タケル）バイライン ─────────────────────────── */
+.byline { display: flex; gap: 12px; align-items: flex-start; margin-top: 24px; padding: 14px 16px; background: var(--accent-soft); border-radius: 3px; }
+.byline-lg { max-width: 650px; margin-top: 22px; }
+.avatar { flex: none; display: grid; width: 34px; height: 34px; place-items: center; color: #fff; background: var(--accent); border-radius: 50%; font: 900 14px/1 var(--en); }
+.byline-text { color: #40564d; font-size: 13px; line-height: 1.75; }
+.byline-text b { display: block; color: var(--ink); font-size: 13px; font-weight: 800; }
+.closing .note { margin-top: 14px; color: #7a7a7a; }
+
 /* ── 記事 ───────────────────────────────────────────────── */
 .hero { padding: clamp(40px, 6vw, 76px) 0 clamp(28px, 4vw, 46px); background: var(--paper-2); border-bottom: 1px solid var(--line); }
 .hero-inner { width: min(var(--article), calc(100% - 48px)); margin-inline: auto; }
