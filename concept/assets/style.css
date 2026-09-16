@@ -101,6 +101,25 @@ h1, h2, h3, p, figure, blockquote, ul, ol { margin: 0; }
 .byline-text b { display: block; color: var(--ink); font-size: 13px; font-weight: 800; }
 .closing .note { margin-top: 14px; color: #7a7a7a; }
 
+/* ── 図版（インラインSVG） ───────────────────────────────── */
+.hero-figure svg, .fig svg { display: block; width: 100%; height: auto; }
+.fig { margin: 32px 0 4px; border: 1px solid var(--line); background: var(--paper-2); }
+.fig + .fig { margin-top: 18px; }
+.fig .fig-title { padding: 11px 14px 0; color: var(--ink); font-size: 13px; font-weight: 800; letter-spacing: -.01em; }
+.fig figcaption { padding: 9px 14px 11px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.fig figcaption b { color: var(--accent); font-weight: 800; }
+.svg-l { fill: var(--line); }
+.svg-a { fill: var(--accent); }
+.svg-s { fill: var(--accent-soft); }
+.svg-g { fill: #cfcfcf; }
+.svg-t { fill: #4a4a4a; font: 700 16px/1 var(--jp); }
+.svg-tw { fill: #fff; font: 700 16px/1 var(--jp); }
+.svg-ta { fill: var(--accent); font: 800 16px/1 var(--jp); }
+.svg-tm { fill: #8a8a8a; font: 700 15px/1 var(--jp); }
+.svg-num { fill: var(--accent); font: 900 17px/1 var(--en); }
+.svg-line { stroke: #cfcfcf; stroke-width: 1.5; fill: none; }
+.svg-line-a { stroke: var(--accent); stroke-width: 2; fill: none; }
+
 /* ── 記事 ───────────────────────────────────────────────── */
 .hero { padding: clamp(40px, 6vw, 76px) 0 clamp(28px, 4vw, 46px); background: var(--paper-2); border-bottom: 1px solid var(--line); }
 .hero-inner { width: min(var(--article), calc(100% - 48px)); margin-inline: auto; }
@@ -151,6 +170,10 @@ footer { margin-top: 70px; padding: 25px 0 42px; border-top: 1px solid var(--lin
   .article-card.is-lead { grid-column: auto; }
   .visual, .article-card.is-lead .visual { aspect-ratio: 1.6; }
   .article-card h3, .article-card:first-child h3 { font-size: 21px; }
+  .hero-figure, .fig { overflow-x: auto; }
+  .hero-figure svg, .fig svg { min-width: 720px; }
+  .fig .fig-title, .fig figcaption, .hero-figure figcaption { position: sticky; left: 0; }
+  .fig figcaption::after, .hero-figure figcaption::after { content: "図は横にスクロールできます"; display: block; margin-top: 4px; color: #9a9a9a; font-weight: 400; }
   .pager { grid-template-columns: 1fr; }
   .pager .next { text-align: left; }
 }
